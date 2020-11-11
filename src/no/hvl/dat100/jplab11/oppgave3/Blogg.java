@@ -99,7 +99,19 @@ public class Blogg {
 	// valgfrie oppgaver nedenfor
 
 	public void utvid() {
-		throw new UnsupportedOperationException(TODO.method());
+		
+		//lager ny innleg-tabell med dobbel størrelse av nåværende tabell
+		Innlegg[] utvidetInnleggtabell = new Innlegg[nesteledig*2];
+		
+		for (int i=0; i<nesteledig; i++) {
+			utvidetInnleggtabell[i] = innleggtabell[i];
+			//kopierer over elementer fra originaltab til ny tab
+			
+		}
+		innleggtabell = utvidetInnleggtabell; //setter gammel til å peke på utvidet/ny.
+		
+		
+		//throw new UnsupportedOperationException(TODO.method());
 	}
 
 	public boolean leggTilUtvid(Innlegg innlegg) {
