@@ -21,8 +21,32 @@ public class LesBlogg {
 	private static String BILDE = "BILDE";
 
 	public static Blogg les(String mappe, String filnavn) {
+		
+		
+		try {
+			File fil = new File(mappe + filnavn);
+			Scanner leser = new Scanner(fil);
+			//hent ut første linje og sett tallet der til lengde i blogg konstrk 
+			
+			int antallLestFrafil = leser.nextInt();
+			
+			Blogg bloggen = new Blogg(antallLestFrafil);
+			for (int i=0; i< antallLestFrafil; i++) {
+				if () {
+					//hvis linje 2 = TEKST, opprett tekst-innlegg
+					//hvis linje 8 = BILDe, opprett bilde-innlegg
+				}
+			}
+				
+		
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("File not found..");
+		}
+		
+		
 
-		throw new UnsupportedOperationException(TODO.method());
+		//throw new UnsupportedOperationException(TODO.method());
 
 	}
 }

@@ -121,8 +121,16 @@ public class Blogg {
 	}
 
 	public boolean slett(Innlegg innlegg) {
+		int posisjon = finnInnlegg(innlegg); // bruker metoden for å finne indeksen i tabellen til innlegge som skal slettes
+		if (posisjon != -1) { //hvis posisjon er funnet (-1 betyr ikke funnet, ihht returverdi metode)
+			innleggtabell[posisjon] = null;
+			nesteledig--;
+			return true;
+		}
+		
+		return false;
 
-		throw new UnsupportedOperationException(TODO.method());
+		//throw new UnsupportedOperationException(TODO.method());
 	}
 
 	public int[] search(String keyword) {
